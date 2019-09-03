@@ -1,0 +1,23 @@
+version: "3"
+
+services:  
+  node-app-1:
+    build: ./node-app-1
+    command: node app.js    
+    networks:
+      - careclub-network
+    environment:
+      NODE_APP_2_HOST: http://node-app-2:8080
+    ports:
+      - "3000:8080"
+
+  node-app-2:
+    build: ./node-app-2
+    command: node app.js    
+    networks:
+      - careclub-network
+    ports:
+      - "3001:8080"
+
+networks:
+  careclub-network:
