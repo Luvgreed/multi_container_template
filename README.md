@@ -1,7 +1,8 @@
 #	multi-container sample : nodejs
 
 Objective :
-[x]	docker-compose resolve hostname in url
+
+- [x]	docker-compose resolve hostname in url
 
 
 ```shell 
